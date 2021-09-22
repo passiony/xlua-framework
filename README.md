@@ -1,10 +1,11 @@
 # xlua-framework - unity2018
 
 基于xlua-framework的升级版，商业项目使用，持续更新...
+兼容unity2017,unity2019，unity2020,unity2021
 
 ## 升级简介
 
-1.升级了xlua最新版本，兼容unity2017-unity2019
+1.升级了xlua最新版本
 
 2.重新整合了xlua框架，可以直接替换腾讯的xlua文件夹
 
