@@ -5,11 +5,9 @@ using System.Net.Sockets;
 using CustomDataStruct;
 using System.Threading;
 using System.Collections.Generic;
-using XLua;
 
 namespace Networks
 {
-    [Hotfix]
     public class HjTcpNetwork : HjNetworkBase
     {
         private Thread mSendThread = null;
@@ -213,14 +211,12 @@ namespace Networks
 #if UNITY_EDITOR
     public static class HjTcpNetworkExporter
     {
-        [LuaCallCSharp]
         public static List<Type> LuaCallCSharp = new List<Type>()
         {
             typeof(HjTcpNetwork),
             typeof(ByteBuffer),
         };
 
-        [CSharpCallLua]
         public static List<Type> CSharpCallLua = new List<Type>()
         {
             typeof(Action<object, int, string>),

@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using XLua;
 
 /// <summary>
 /// added by wsh @ 2017.12.22
@@ -18,8 +17,6 @@ using XLua;
 
 namespace AssetBundles
 {
-    [Hotfix]
-    [LuaCallCSharp]
     public class AssetBundleRequester : BaseAssetRequester
     {
         static Queue<AssetBundleRequester> pool = new Queue<AssetBundleRequester>();

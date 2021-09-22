@@ -2,15 +2,12 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using XLua;
 
 /// <summary>
 /// added by wsh @ 2018.01.03
 /// 功能：Tip弹窗
 /// </summary>
 
-[Hotfix]
-[LuaCallCSharp]
 public class UINoticeTip : Singleton<UINoticeTip>
 {
     GameObject go;
@@ -180,13 +177,11 @@ public class UINoticeTip : Singleton<UINoticeTip>
         }
     }
 
-    [BlackList]
     public IEnumerator WaitForResponse()
     {
         yield return new WaitUntil(() => {
             return LastClickIndex != -1;
         });
-        yield break;
     }
     
     public float progress

@@ -3,9 +3,7 @@ using System.Collections;
 using System.IO;
 using System.Text;
 using System;
-using XLua;
 
-[LuaCallCSharp]
 public class ByteBuffer
 {
     MemoryStream stream = null;

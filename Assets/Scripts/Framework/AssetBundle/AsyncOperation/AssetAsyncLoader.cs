@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using XLua;
 
 /// <summary>
 /// added by wsh @ 2017.12.22
@@ -10,8 +9,6 @@ using XLua;
 
 namespace AssetBundles
 {
-    [Hotfix]
-    [LuaCallCSharp]
     public class AssetAsyncLoader : BaseAssetAsyncLoader
     {
         static Queue<AssetAsyncLoader> pool = new Queue<AssetAsyncLoader>();

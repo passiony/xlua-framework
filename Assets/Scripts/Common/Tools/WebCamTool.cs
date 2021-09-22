@@ -9,7 +9,6 @@ using UnityEngine.UI;
 /// 1.该类为单利类，直接调用StartWebCamera即可使用
 /// 2.需要传递一个RawImage参数，作为摄像机画面输出
 /// </summary>
-[XLua.Hotfix]
 public class WebCamTool : MonoSingleton<WebCamTool>
 {
     string DeviceName;

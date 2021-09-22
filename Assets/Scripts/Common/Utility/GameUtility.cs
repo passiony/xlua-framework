@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.IO;
 using System.Linq;
-using XLua;
 using System;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
@@ -11,7 +10,6 @@ using UnityEngine.EventSystems;
 /// 功能：通用静态方法
 /// </summary>
 
-[Hotfix]
 public class GameUtility
 {
     public const string AssetsFolderName = "Assets";
@@ -517,7 +515,6 @@ public class GameUtility
 #if UNITY_EDITOR
 public static class GameUtilityExporter
 {
-    [LuaCallCSharp]
     public static List<Type> LuaCallCSharp = new List<Type>(){
             typeof(GameUtility),
         };

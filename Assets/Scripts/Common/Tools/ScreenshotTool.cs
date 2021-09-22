@@ -10,7 +10,6 @@ using System.IO;
 /// 2.刷新相册，需要额外调用方法
 /// 3.pc下比较简单，可以直接Application.ScreenShot()
 /// </summary>
-[XLua.Hotfix]
 public class ScreenshotTool
 {
     //截屏保存，回调路径

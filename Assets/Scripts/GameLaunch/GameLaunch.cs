@@ -3,10 +3,7 @@ using System.Collections;
 using AssetBundles;
 using GameChannel;
 using System;
-using XLua;
 
-[Hotfix]
-[LuaCallCSharp]
 public class GameLaunch : MonoBehaviour
 {
     const string launchPrefabPath = "UI/Prefabs/UILoading/UILoading.prefab";
@@ -26,12 +23,6 @@ public class GameLaunch : MonoBehaviour
 
     IEnumerator Start ()
     {
-        //注释掉IOS的推送服务
-//#if UNITY_IPHONE
-//        UnityEngine.iOS.NotificationServices.RegisterForNotifications(UnityEngine.iOS.NotificationType.Alert | UnityEngine.iOS.NotificationType.Badge | UnityEngine.iOS.NotificationType.Sound);
-//        UnityEngine.iOS.Device.SetNoBackupFlag(Application.persistentDataPath);
-//#endif
-
         // 启动资源管理模块
         var start = DateTime.Now;
         yield return AssetBundleManager.Instance.Initialize();
@@ -74,9 +65,9 @@ public class GameLaunch : MonoBehaviour
         
         // 启动xlua框架
         start = DateTime.Now;
-        XLuaManager.Instance.Startup();
+        PuertsManager.Instance.Startup();
         yield return StartGame();
-        Logger.Log(string.Format("XLuaManager StartUp use {0}ms", (DateTime.Now - start).Milliseconds));
+        Logger.Log(string.Format("PuertsManager StartUp use {0}ms", (DateTime.Now - start).Milliseconds));
 	}
 
      IEnumerator InitAppVersion()
@@ -221,16 +212,13 @@ public class GameLaunch : MonoBehaviour
     
     IEnumerator StartGame()
     {
-        string luaAssetbundleName = XLuaManager.Instance.AssetbundleName;
+        string luaAssetbundleName = PuertsManager.Instance.AssetbundleName;
         AssetBundleManager.Instance.SetAssetBundleResident(luaAssetbundleName, true);
         var abloader = AssetBundleManager.Instance.LoadAssetBundleAsync(luaAssetbundleName,typeof(TextAsset));
         yield return abloader;
         abloader.Dispose();
 
-        XLuaManager.Instance.OnInit();
-        XLuaManager.Instance.StartHotfix();
-        XLuaManager.Instance.StartGame();
-
-        CustomDataStruct.Helper.Startup();
+        PuertsManager.Instance.OnInit();
+        PuertsManager.Instance.StartGame();
     }
 }

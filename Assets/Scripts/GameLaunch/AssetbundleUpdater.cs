@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using AssetBundles;
-using XLua;
 using GameChannel;
 using System;
 
@@ -12,8 +11,6 @@ using System;
 /// 功能：Assetbundle更新器
 /// </summary>
 
-[Hotfix]
-[LuaCallCSharp]
 public class AssetbundleUpdater : MonoBehaviour
 {
     static int MAX_DOWNLOAD_NUM = 5;

@@ -123,7 +123,7 @@ public class BuildPlayer : Editor
     {
         bool buildForPerChannel = PackageUtils.BuildAssetBundlesForPerChannel(buildTarget);
 
-        XLuaMenu.CopyLuaFilesToAssetsPackage();
+        PuertsMenu.CopyLuaFilesToAssetsPackage();
         PackageUtils.CheckAndRunAllCheckers(buildForPerChannel, false);
 
         DateTime start = DateTime.Now;
@@ -148,7 +148,7 @@ public class BuildPlayer : Editor
         var targetName = PackageUtils.GetPlatformName(buildTarget);
         Debug.Assert(buildForPerChannel == true);
 
-        XLuaMenu.CopyLuaFilesToAssetsPackage();
+        PuertsMenu.CopyLuaFilesToAssetsPackage();
         PackageUtils.CheckAndRunAllCheckers(buildForPerChannel, false);
 
         int index = 0;

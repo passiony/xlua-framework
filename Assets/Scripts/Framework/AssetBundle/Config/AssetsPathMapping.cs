@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using XLua;
 
 /// <summary>
 /// added by wsh @ 2017.12.26
@@ -37,8 +36,6 @@ namespace AssetBundles
         public string assetName;
     }
 
-    [Hotfix]
-    [LuaCallCSharp]
     public class AssetsPathMapping
     {
         protected const string PATTREN = AssetBundleConfig.CommonMapPattren;

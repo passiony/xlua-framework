@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using XLua;
 
 namespace AssetBundles
 {
@@ -7,61 +6,61 @@ namespace AssetBundles
     public partial class AssetBundleManager
     {
 
-        [BlackList]
+        
         public HashSet<string> GetAssetbundleResident()
         {
             return assetbundleResident;
         }
 
-        [BlackList]
+        
         public ICollection<string> GetAssetbundleCaching()
         {
             return assetbundlesCaching.Keys;
         }
 
-        [BlackList]
+        
         public Dictionary<string, BaseAssetRequester> GetWebRequesting()
         {
             return webRequesting;
         }
 
-        [BlackList]
+        
         public Queue<BaseAssetRequester> GetWebRequestQueue()
         {
             return webRequesterQueue;
         }
 
-        [BlackList]
+        
         public List<BaseAssetRequester> GetProsessingWebRequester()
         {
             return prosessingWebRequester;
         }
 
-        [BlackList]
+        
         public List<AssetBundleAsyncLoader> GetProsessingAssetBundleAsyncLoader()
         {
             return prosessingAssetBundleAsyncLoader;
         }
 
-        [BlackList]
+        
         public List<AssetAsyncLoader> GetProsessingAssetAsyncLoader()
         {
             return prosessingAssetAsyncLoader;
         }
 
-        [BlackList]
+        
         public string GetAssetBundleName(string assetName)
         {
             return assetsPathMapping.GetAssetBundleName(assetName);
         }
 
-        [BlackList]
+        
         public int GetAssetCachingCount()
         {
             return assetsCaching.Count;
         }
 
-        [BlackList]
+        
         public Dictionary<string, List<string>> GetAssetCaching()
         {
             var assetbundleDic = new Dictionary<string, List<string>>();
@@ -85,13 +84,13 @@ namespace AssetBundles
             return assetbundleDic;
         }
 
-        [BlackList]
+        
         public int GetAssetbundleRefrenceCount(string assetbundleName)
         {
             return GetReferenceCount(assetbundleName);
         }
 
-        [BlackList]
+        
         public int GetAssetbundleDependenciesCount(string assetbundleName)
         {
             string[] dependancies = manifest.GetAllDependencies(assetbundleName);
@@ -108,7 +107,7 @@ namespace AssetBundles
             return count;
         }
 
-        [BlackList]
+        
         public List<string> GetAssetBundleRefrences(string assetbundleName)
         {
             List<string> refrences = new List<string>();
@@ -155,7 +154,7 @@ namespace AssetBundles
             return refrences;
         }
 
-        [BlackList]
+        
         public List<string> GetWebRequesterRefrences(string assetbundleName)
         {
             List<string> refrences = new List<string>();
@@ -174,7 +173,7 @@ namespace AssetBundles
             return refrences;
         }
 
-        [BlackList]
+        
         public List<string> GetAssetBundleLoaderRefrences(string assetbundleName)
         {
             List<string> refrences = new List<string>();

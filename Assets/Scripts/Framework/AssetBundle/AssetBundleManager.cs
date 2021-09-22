@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using XLua;
 using System;
 using UObject = UnityEngine.Object;
 using System.IO;
@@ -37,8 +36,6 @@ using UnityEditor;
 
 namespace AssetBundles
 {
-    [Hotfix]
-    [LuaCallCSharp]
     public partial class AssetBundleManager : MonoSingleton<AssetBundleManager>
     {
         // 最大同时进行的ab创建数量

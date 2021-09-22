@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using XLua;
 
 /// <summary>
 /// 说明：
@@ -14,7 +13,6 @@ using XLua;
 
 namespace CustomDataStruct
 {
-    [Hotfix]
     public sealed class StreamBufferPool
     {
 #if UNITY_EDITOR
@@ -150,7 +148,6 @@ namespace CustomDataStruct
         }
     }
 
-    [Hotfix]
     public sealed class StreamBuffer : IDisposable
     {
         byte[] mBuffer;
@@ -285,7 +282,6 @@ namespace CustomDataStruct
 #if UNITY_EDITOR
     public static class StreamBufferPoolExporter
     {
-        [LuaCallCSharp]
         public static List<Type> LuaCallCSharp = new List<Type>()
         {
             typeof(StreamBufferPool),

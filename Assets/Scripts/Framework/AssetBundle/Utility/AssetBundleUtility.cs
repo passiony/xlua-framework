@@ -1,5 +1,4 @@
 using UnityEngine;
-using XLua;
 using System.IO;
 
 /// <summary>
@@ -12,8 +11,6 @@ using System.IO;
 
 namespace AssetBundles
 {
-    [Hotfix]
-    [LuaCallCSharp]
     public class AssetBundleUtility
     {
         public static bool IsEditorMode()

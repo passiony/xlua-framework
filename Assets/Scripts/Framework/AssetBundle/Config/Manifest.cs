@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using XLua;
 
 /// <summary>
 /// added by wsh @ 2017.12.23
@@ -12,8 +11,6 @@ using XLua;
 
 namespace AssetBundles
 {
-    [Hotfix]
-    [LuaCallCSharp]
     public class Manifest
     {
         const string assetName = "AssetBundleManifest";

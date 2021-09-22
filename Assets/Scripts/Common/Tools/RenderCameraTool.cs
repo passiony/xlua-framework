@@ -8,7 +8,6 @@ using UnityEngine.UI;
 /// 3.调用静态方法CreateRender即可
 /// 4.页面关闭时，别忘记调用Destroy方法，销毁相机
 /// </summary>
-[XLua.Hotfix]
 public class RenderCameraTool
 {
     public Camera renderCamera;

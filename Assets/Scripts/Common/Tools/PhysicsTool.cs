@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[XLua.Hotfix]
 public class PhysicsTool : MonoBehaviour
 {
     /// <summary>

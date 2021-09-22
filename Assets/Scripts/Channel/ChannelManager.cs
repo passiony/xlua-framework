@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections;
-using XLua;
 
 namespace GameChannel
 {
-    [Hotfix]
-    [LuaCallCSharp]
     public class ChannelManager : Singleton<ChannelManager>
     {
         private BaseChannel channel = null;

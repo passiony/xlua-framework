@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using XLua;
 using System;
 
-[Hotfix]
 public class LoggerHelper : MonoSingleton<LoggerHelper>
 {
     public enum LOG_TYPE
@@ -114,7 +112,6 @@ public class LoggerHelper : MonoSingleton<LoggerHelper>
 #if UNITY_EDITOR
 public static class LoggerHelperExporter
 {
-    [LuaCallCSharp]
     public static List<Type> LuaCallCSharp = new List<Type>()
         {
             typeof(LoggerHelper),
